@@ -1,0 +1,16 @@
+{
+  "name": "xpertos-theme",
+  "version": "1.0.0",
+  "description": "Xpertos theme for wordpress",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felipe Camacho www.cogroupsas.com",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*"
+  }
+}

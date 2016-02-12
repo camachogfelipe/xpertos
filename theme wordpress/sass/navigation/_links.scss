@@ -1,0 +1,22 @@
+a {
+	color: $color__link;
+	text-transform: uppercase;
+	font-family: "MuseoSans-500";
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		text-decoration: none;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

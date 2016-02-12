@@ -1,0 +1,983 @@
+@charset "UTF-8";
+/*!
+Theme Name: xpertos
+Theme URI: http://underscores.me/
+Author: Felipe Camacho
+Author URI: http://www.cogroupsas.com
+Description: Theme for Xpertos.co
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: xpertos
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+xpertos is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* @import "normalize"; */
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@font-face {
+  font-family: MuseoSans-100;
+  src: url(fonts/museo/100/MuseoSans-100.eot?#iefix);
+  src: local("Ôÿ║"), url(fonts/museo/100/MuseoSans-100.otf) format("opentype"), url(fonts/museo/100/MuseoSans-100.eot?#iefix) format("embedded-opentype"), url(fonts/museo/100/MuseoSans-100.TTF) format("TrueType"), url(fonts/museo/100/MuseoSans-100.svg#MuseoSans-100) format("svg"), url(fonts/museo/100/MuseoSans-100.dfont) format("dfont"), url(fonts/museo/100/MuseoSans-100.suit) format("suit"), url(fonts/museo/100/MuseoSans-100.woff) format("woff");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: MuseoSans-300;
+  src: url(fonts/museo/300/MuseoSans-300.eot?#iefix);
+  src: local("Ôÿ║"), url(fonts/museo/300/MuseoSans-300.otf) format("opentype"), url(fonts/museo/300/MuseoSans-300.eot?#iefix) format("embedded-opentype"), url(fonts/museo/300/MuseoSans-300.TTF) format("TrueType"), url(fonts/museo/300/MuseoSans-300.svg#MuseoSans-300) format("svg"), url(fonts/museo/300/MuseoSans-300.dfont) format("dfont"), url(fonts/museo/300/MuseoSans-300.suit) format("suit"), url(fonts/museo/300/MuseoSans-300.woff) format("woff");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: MuseoSans-500;
+  src: url(fonts/museo/500/MuseoSans-500.eot?#iefix);
+  src: local("Ôÿ║"), url(fonts/museo/500/MuseoSans-500.otf) format("opentype"), url(fonts/museo/500/MuseoSans-500.eot?#iefix) format("embedded-opentype"), url(fonts/museo/500/MuseoSans-500.TTF) format("TrueType"), url(fonts/museo/500/MuseoSans-500.svg#MuseoSans-500) format("svg"), url(fonts/museo/500/MuseoSans-500.dfont) format("dfont"), url(fonts/museo/500/MuseoSans-500.suit) format("suit"), url(fonts/museo/500/MuseoSans-500.woff) format("woff");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: MuseoSans-700;
+  src: url(fonts/museo/700/MuseoSans-700.eot?#iefix);
+  src: local("Ôÿ║"), url(fonts/museo/700/MuseoSans-700.otf) format("opentype"), url(fonts/museo/700/MuseoSans-700.eot?#iefix) format("embedded-opentype"), url(fonts/museo/700/MuseoSans-700.TTF) format("TrueType"), url(fonts/museo/700/MuseoSans-700.svg#MuseoSans-700) format("svg"), url(fonts/museo/700/MuseoSans-700.dfont) format("dfont"), url(fonts/museo/700/MuseoSans-700.suit) format("suit"), url(fonts/museo/700/MuseoSans-700.woff) format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: MuseoSans-900;
+  src: url(fonts/museo/900/MuseoSans-900.eot?#iefix);
+  src: local("Ôÿ║"), url(fonts/museo/900/MuseoSans-900.otf) format("opentype"), url(fonts/museo/900/MuseoSans-900.eot?#iefix) format("embedded-opentype"), url(fonts/museo/900/MuseoSans-900.TTF) format("TrueType"), url(fonts/museo/900/MuseoSans-900.svg#MuseoSans-900) format("svg"), url(fonts/museo/900/MuseoSans-900.dfont) format("dfont"), url(fonts/museo/900/MuseoSans-900.suit) format("suit"), url(fonts/museo/900/MuseoSans-900.woff) format("woff");
+  font-weight: 900;
+  font-style: normal; }
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: "MuseoSans-100", sans-serif;
+  /*@include font-size(1);*/
+  line-height: 1.4;
+  font-size: 1.5rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  color: #8e195f;
+  text-transform: uppercase;
+  font-family: "MuseoSans-700"; }
+
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong, strong {
+  font-family: "MuseoSans-900"; }
+
+p {
+  margin-bottom: 1.5em; }
+
+dfn, cite, em, i {
+  font-style: italic; }
+
+blockquote {
+  margin: 0 1.5em; }
+
+address {
+  margin: 0 0 1.5em; }
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em; }
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
+big {
+  font-size: 125%; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box; }
+
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */ }
+
+blockquote, q {
+  quotes: "" ""; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ""; }
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
+
+ul, ol {
+  margin: 0 0 1.5em 3em; }
+
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 1.5em 1.5em; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%; }
+
+/* preload */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000; }
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 250px;
+  height: 250px;
+  margin: -125px 0 0 -125px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 10001; }
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin 3s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */ }
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 1.5s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.5s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */ }
+
+#loader-img {
+  position: inherit;
+  top: 50%;
+  margin-top: -19px;
+  left: 50%;
+  margin-left: -85px;
+  z-index: 11000; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */ }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */ } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */ }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */ } }
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  -webkit-transform: translateX(0);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(0);
+  /* IE 9 */
+  transform: translateX(0);
+  /* Firefox 16+, IE 10+, Opera */ }
+
+#loader-wrapper .loader-section.section-left {
+  left: 0; }
+
+#loader-wrapper .loader-section.section-right {
+  right: 0; }
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(-100%);
+  /* IE 9 */
+  transform: translateX(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(100%);
+  /* IE 9 */
+  transform: translateX(100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%);
+  /* IE 9 */
+  transform: translateY(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out; }
+
+@media screen and (min-width: 1024px) {
+  .slidediv {
+    position: relative;
+    overflow: hidden;
+    height: 635px; }
+
+  .contact-absolute {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.3);
+    /*padding-top: 9rem;*/ }
+
+  .section-contact {
+    color: #fff;
+    text-transform: uppercase; }
+    .section-contact h1, .section-contact h2, .section-contact h3, .section-contact h4, .section-contact h5, .section-contact h6 {
+      color: #fff; }
+    .section-contact button {
+      text-transform: uppercase; } }
+@media screen and (max-width: 1023px) {
+  .section-contact h1, .section-contact h2, .section-contact h3, .section-contact h4, .section-contact h5, .section-contact h6 {
+    color: #404040; } }
+.section {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2rem; }
+  .section div h2, .section div h4 {
+    text-transform: uppercase;
+    font-weight: bold; }
+  .section .row {
+    margin-top: 2em; }
+
+.section-bg {
+  min-height: 500px;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center 0; }
+  .section-bg div h2, .section-bg div h4, .section-bg div p {
+    color: #fff; }
+
+.section-how-to-buy div p {
+  padding: 5px 0; }
+.section-how-to-buy div p::before {
+  left: 50%;
+  width: 40%;
+  margin-top: -8px; }
+.section-how-to-buy div p::after {
+  left: 50%;
+  width: 20%;
+  margin-top: 8px; }
+.section-how-to-buy div p::before, .section-how-to-buy div p::after {
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #8e195f;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.section-contact .top-bar-contact {
+  margin-bottom: 8rem;
+  padding: 0.5rem 0; }
+  .section-contact .top-bar-contact a {
+    text-transform: uppercase; }
+
+.section-xpertos a {
+  color: #ccc; }
+.section-xpertos a:hover, .section-xpertos a:focus {
+  color: #8e195f; }
+
+.section-services {
+  min-height: 440px;
+  padding-bottom: 20px; }
+  .section-services .casita {
+    overflow: hidden;
+    width: 400px;
+    max-width: 400px;
+    height: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+    border: 20px solid #B1B2B2;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    overflow: hidden; }
+    .section-services .casita .left, .section-services .casita .right {
+      width: 50%;
+      float: left; }
+    .section-services .casita .left, .section-services .casita .right, .section-services .casita .bottom {
+      height: 50%;
+      overflow: hidden; }
+    .section-services .casita .bottom {
+      clear: both; }
+    .section-services .casita a {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: white;
+      line-height: 10em; }
+    .section-services .casita a:hover, .section-services .casita a:focus,
+    .section-services .casita a:active, .section-services .casita a.active {
+      outline: 0;
+      background-image: none;
+      -webkit-box-shadow: inset 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: inset 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 10px 10px 30px 0px rgba(0, 0, 0, 0.5); }
+    .section-services .casita a.top-left {
+      -moz-border-top-left-radius: 100%;
+      -webkit-border-top-left-radius: 100%;
+      border-top-left-radius: 100%;
+      background-color: #E1A926; }
+      .section-services .casita a.top-left img {
+        margin-top: calc(50% - 45px);
+        margin-left: calc(50% - 45px); }
+    .section-services .casita a.top-right {
+      -moz-border-top-right-radius: 100%;
+      -webkit-border-top-right-radius: 100%;
+      border-top-right-radius: 100%;
+      background-color: #239CA4; }
+      .section-services .casita a.top-right img {
+        margin-top: calc(50% - 45px);
+        margin-right: calc(50% - 45px); }
+    .section-services .casita a.btm {
+      -moz-border-bottom-radius: 100%;
+      -webkit-border-bottom-radius: 100%;
+      border-bottom-radius: 100%;
+      background-color: #982481; }
+    @media screen and (max-width: 320px) {
+      .section-services .casita {
+        width: 290px;
+        max-width: 290px;
+        height: 290px;
+        max-height: 290px; } }
+    @media screen and (min-width: 321px) and (max-width: 360px) {
+      .section-services .casita {
+        width: 330px;
+        max-width: 330px;
+        height: 330px;
+        max-height: 330px; } }
+    @media screen and (min-width: 361px) and (max-width: 375px) {
+      .section-services .casita {
+        width: 345px;
+        max-width: 345px;
+        height: 345px;
+        max-height: 345px; } }
+    @media screen and (min-width: 376px) and (max-width: 384px) {
+      .section-services .casita {
+        width: 354px;
+        max-width: 354px;
+        height: 354px;
+        max-height: 354px; } }
+    @media screen and (min-width: 385px) and (max-width: 412px) {
+      .section-services .casita {
+        width: 382px;
+        max-width: 382px;
+        height: 382px;
+        max-height: 382px; } }
+    @media screen and (min-width: 413px) and (max-width: 414px) {
+      .section-services .casita {
+        width: 384px;
+        max-width: 384px;
+        height: 384px;
+        max-height: 384px; } }
+  .section-services .section-services-detail {
+    padding: 14px; }
+
+.navbar {
+  z-index: 1000; }
+
+@media screen and (max-width: 720px) {
+  ul li {
+    margin-left: 3rem; }
+
+  img {
+    margin-left: 2rem; } }
+.ui-datepicker-week-end span {
+  color: #333 !important; }
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/*button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	@include font-size(1.5);
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+
+	&:hover {
+		border-color: $color__border-button-hover;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	}
+}*/
+.btn.btn-xpertos {
+  background-color: #8e195f;
+  color: #fff; }
+
+.btn.btn-xpertos.active {
+  background-color: #771955;
+  color: #fff; }
+
+.btn.btn-xpertos1 {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff; }
+
+/*@import "fields";*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: #8e195f;
+  text-transform: uppercase;
+  font-family: "MuseoSans-500"; }
+  a:visited {
+    color: none; }
+  a:hover, a:focus, a:active {
+    color: #ccc;
+    text-decoration: none; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.navbar .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  min-height: 70px;
+  margin-left: -1.5rem; }
+
+.nav-cart {
+  border-left: 2px solid #fff;
+  transform: skew(0deg, 1deg);
+  -webkit-transform: skew(0deg, 0);
+  -moz-transform: skew(0deg, 0);
+  -o-transform: skew(0deg, 0);
+  -ms-transform: skew(0deg, 0); }
+  .nav-cart li {
+    transform: skew(24deg, 1deg);
+    -webkit-transform: skew(24deg, 0);
+    -moz-transform: skew(24deg, 0);
+    -o-transform: skew(24deg, 0);
+    -ms-transform: skew(24deg, 0); }
+
+.div-menu-footer #footer-menu {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 1.8rem; }
+  .div-menu-footer #footer-menu a {
+    color: #404040; }
+  .div-menu-footer #footer-menu a:hover, .div-menu-footer #footer-menu a:focus, .div-menu-footer #footer-menu a.active {
+    color: #8e195f; }
+.div-menu-footer .social-footer {
+  margin-top: 1.5em; }
+  .div-menu-footer .social-footer a {
+    color: #ccc;
+    display: block;
+    width: 35px;
+    height: 35px;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+    background-color: #8e195f;
+    margin-right: 10px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%; }
+  .div-menu-footer .social-footer a:hover, .div-menu-footer .social-footer a:focus {
+    color: #fff; }
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em; }
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em; }
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table; }
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both; }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */ }
+  .widget select {
+    max-width: 100%; }
+
+/* Search widget. */
+.widget_search .search-submit {
+  display: none; }
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+.content-area {
+  float: left;
+  margin: 0 -25% 0 0;
+  width: 100%; }
+
+.site-main {
+  margin: 0 25% 0 0; }
+
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 25%; }
+
+.site-header-menu {
+  z-index: 1000;
+  max-height: 71px; }
+
+@media screen and (min-width: 1024px) {
+  .site-header-menu {
+    position: absolute;
+    bottom: 0; } }
+.site-footer {
+  clear: both;
+  width: 100%;
+  background-color: #ccc;
+  padding: 2em 0; }
+  .site-footer .logo {
+    text-align: center; }
+  .site-footer .contacto h4, .site-footer .contacto h5 {
+    text-transform: uppercase;
+    color: #8e195f;
+    font-weight: bold; }
+  .site-footer .site-info {
+    margin-top: 1em; }
+
+.secondary {
+  border: 3px solid #ccc;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  .secondary h2 {
+    font-size: 2rem; }
+  .secondary ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .secondary ul li a {
+      color: #666; }
+    .secondary ul li a:hover, .secondary ul li a:focus, .secondary ul li a.active {
+      color: #8e195f; }
+
+/*.content-area {
+	float: right;
+	margin: 0 0 0 (-$size__site-sidebar);
+	width: $size__site-main;
+}
+
+.site-main {
+	margin: 0 0 0 $size__site-sidebar;
+}
+
+.site-content .widget-area {
+	float: left;
+	overflow: hidden;
+	width: $size__site-sidebar;
+}
+
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+}*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block; }
+
+.hentry {
+  margin: 0; }
+
+.byline,
+.updated:not(.published) {
+  display: none; }
+
+.single .byline,
+.group-blog .byline {
+  display: inline; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 0;
+  overflow: hidden;
+  clear: both; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+.entry-header {
+  overflow: hidden; }
+
+.entry-title {
+  text-transform: uppercase;
+  color: #8e195f; }
+
+.entry-meta {
+  border: 3px solid #ccc;
+  margin-bottom: 1rem;
+  background-color: #fff; }
+
+.entry-time, .entry-tags {
+  margin: 1rem; }
+
+.entry-time {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 0; }
+  .entry-time time {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 2rem;
+    text-transform: uppercase; }
+  .entry-time time.day {
+    font-weight: bold;
+    font-size: 5rem; }
+
+.entry-tags {
+  text-transform: uppercase;
+  text-align: right; }
+
+@media (min-width: 768px) {
+  .entry-meta {
+    float: left;
+    width: 25%;
+    z-index: 2000;
+    margin-top: 7rem;
+    margin-left: 1rem; }
+
+  .entry-image {
+    float: right;
+    width: 85.5%;
+    z-index: 1000;
+    margin-left: -12rem;
+    max-height: 300px; } }
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none; }
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word; }
+
+.bypostauthor {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none; }
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%; }
+  .wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .wp-caption .wp-caption-text {
+    margin: 0.8075em 0; }
+
+.wp-caption-text {
+  text-align: center; }
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em; }
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+.gallery-caption {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */
